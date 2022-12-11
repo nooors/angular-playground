@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
-  selector: 'app-playground',
-  templateUrl: './playground.component.html',
-  styleUrls: ['./playground.component.scss']
+  selector: "app-playground",
+  templateUrl: "./playground.component.html",
+  styleUrls: ["./playground.component.scss"],
 })
 export class PlaygroundComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  /**
+   * Populates the routes array
+   */
+  ngOnInit(): void {}
+  goTo() {
+    this.router.navigateByUrl("playground/first");
   }
-
 }
