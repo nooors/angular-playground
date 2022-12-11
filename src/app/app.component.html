@@ -1,39 +1,15 @@
 <div class="container-fluid">
+  <app-header></app-header>
+  <div class="col">
     <div class="row">
-        <div class="col">
-            <mat-toolbar>
-                <button mat-icon-button class="example-icon me-2" aria-label="Example icon-button with menu icon">
-                    <mat-icon>menu</mat-icon>
-                </button>
-                <span>My App</span>
-                <span class="example-spacer"></span>
-                <button mat-icon-button class="example-icon favorite-icon"
-                    aria-label="Example icon-button with heart icon">
-                    <mat-icon>favorite</mat-icon>
-                </button>
-                <button mat-icon-button class="example-icon ms-2" aria-label="Example icon-button with share icon">
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-toolbar>
-        </div>
+      <mat-divider class="my-2"></mat-divider>
     </div>
+  </div>
+  <div class="row buttons-row">
     <div class="col">
-        <div class="row">
-            <mat-divider class="my-2"></mat-divider>
-        </div>
+      <app-buttons-row [buttonNames]="routes"></app-buttons-row>
     </div>
-    <div class="row buttons-row">
-        <div class="col">
-            <div *ngIf="routes.length > 0">
-                <button mat-button color="accent" *ngFor="let route of routes; let i = index; trackBy: trackByIndex"
-                    (click)="sendTo(route)">{{
-                    route }}</button>
-            </div>
-
-
-        </div>
-    </div>
-    <mat-divider class="my-2"></mat-divider>
-    <router-outlet></router-outlet>
-
+  </div>
+  <mat-divider class="my-2"></mat-divider>
+  <router-outlet></router-outlet>
 </div>

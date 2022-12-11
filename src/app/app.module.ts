@@ -9,9 +9,11 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { HeaderComponent } from "./components/header/header.component";
+import { ButtonsRowComponent } from './components/buttons-row/buttons-row.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HeaderComponent, ButtonsRowComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
