@@ -1,7 +1,22 @@
+import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = []
+const routes: Routes = [
+  {
+    path: '',
+    component: AppComponent
+  },
+  {
+    path: 'playground',
+    loadChildren: ()=> import('./pages/playground/playground.module').then((m) => m.PlaygroundModule)
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
+]
 
 
 @NgModule({
