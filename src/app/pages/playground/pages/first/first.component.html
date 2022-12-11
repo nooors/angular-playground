@@ -1,1 +1,15 @@
-<p>first works!</p>
+<div class="containter-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="d-flex justify-content-around">
+        <button
+          mat-button
+          *ngFor="let color of colors; let i = index; trackBy: trackByIndex"
+          (click)="selectColor(color)"
+        >
+          {{ color }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

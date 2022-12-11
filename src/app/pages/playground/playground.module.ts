@@ -1,3 +1,4 @@
+import { MatDividerModule } from "@angular/material/divider";
 import { ButtonsRowModule } from "./../../components/buttons-row/buttons-row.module";
 import { PlaygroundRoutingModule } from "./playground-routing.module";
 import { NgModule } from "@angular/core";
@@ -7,7 +8,12 @@ import { PlaygroundComponent } from "./playground.component";
 
 @NgModule({
   declarations: [PlaygroundComponent],
-  imports: [CommonModule, PlaygroundRoutingModule, ButtonsRowModule],
+  imports: [
+    CommonModule,
+    PlaygroundRoutingModule,
+    ButtonsRowModule,
+    MatDividerModule,
+  ],
   exports: [PlaygroundComponent],
 })
 export class PlaygroundModule {}
