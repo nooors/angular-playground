@@ -1,17 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
-import { PlaygroundRoutingModule } from './playground-routing.module';
-import { PlaygroundComponent } from './playground.component';
-
+import { PlaygroundRoutingModule } from "./playground-routing.module";
+import { PlaygroundComponent } from "./playground.component";
 
 @NgModule({
-  declarations: [
-    PlaygroundComponent
-  ],
-  imports: [
-    CommonModule,
-    PlaygroundRoutingModule
-  ]
+  declarations: [PlaygroundComponent],
+  imports: [CommonModule, PlaygroundRoutingModule],
 })
-export class PlaygroundModule { }
+export class PlaygroundModule {}
