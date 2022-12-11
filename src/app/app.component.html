@@ -1,22 +1,15 @@
 <div class="container-fluid">
-    <app-header></app-header>
+  <app-header></app-header>
+  <div class="col">
+    <div class="row">
+      <mat-divider class="my-2"></mat-divider>
+    </div>
+  </div>
+  <div class="row buttons-row">
     <div class="col">
-        <div class="row">
-            <mat-divider class="my-2"></mat-divider>
-        </div>
+      <app-buttons-row [buttonNames]="routes"></app-buttons-row>
     </div>
-    <div class="row buttons-row">
-        <div class="col">
-            <div *ngIf="routes.length > 0">
-                <button mat-button color="accent" *ngFor="let route of routes; let i = index; trackBy: trackByIndex"
-                    (click)="sendTo(route)">{{
-                    route }}</button>
-            </div>
-
-
-        </div>
-    </div>
-    <mat-divider class="my-2"></mat-divider>
-    <router-outlet></router-outlet>
-
+  </div>
+  <mat-divider class="my-2"></mat-divider>
+  <router-outlet></router-outlet>
 </div>
