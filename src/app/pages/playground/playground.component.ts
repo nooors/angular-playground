@@ -13,7 +13,8 @@ export class PlaygroundComponent implements OnInit {
    * Populates the routes array
    */
   ngOnInit(): void {}
-  goTo() {
-    this.router.navigateByUrl("playground/first");
+  goTo(url: string): void {
+    this.router.navigateByUrl(`playground/${url}`);
+    console.log("Button-css", `playground/${url}`);
   }
 }

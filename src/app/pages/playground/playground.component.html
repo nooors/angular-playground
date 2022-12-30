@@ -3,6 +3,11 @@
     <h2>PLAYGROUND</h2>
   </div>
 </div>
-<button mat-button color="accent" (click)="goTo()">Css Binding</button>
+<button mat-button color="accent" (click)="goTo('css-binding')">
+  Css Binding
+</button>
+<button class="ms-2" mat-button color="accent" (click)="goTo('check-box')">
+  Checkbox
+</button>
 <mat-divider class="my-2"></mat-divider>
 <router-outlet></router-outlet>
