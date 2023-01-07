@@ -10,10 +10,19 @@ const routes: Routes = [
       {
         path: "css-binding",
         loadChildren: () =>
-          import("./pages/first/first.module").then((m) => m.FirstModule),
+          import("./pages/css-binding/css-binding.module").then(
+            (m) => m.CssBindingModule
+          ),
       },
       {
         path: "check-box",
+        loadChildren: () =>
+          import("./pages/check-box/check-box.module").then(
+            (m) => m.CheckBoxModule
+          ),
+      },
+      {
+        path: "animations",
         loadChildren: () =>
           import("./pages/check-box/check-box.module").then(
             (m) => m.CheckBoxModule
