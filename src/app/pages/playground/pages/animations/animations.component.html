@@ -1,1 +1,7 @@
-<p>animations works!</p>
+<nav>
+  <button type="button" (click)="toggle()">Toogle Open/Close</button>
+
+  <div [@openClose]="isOpen ? 'open ' : 'closed'" class="open-close-container">
+    <p>Te bos is now {{ isOpen ? 'Open' : 'Closed' }}</p>
+  </div>
+</nav>

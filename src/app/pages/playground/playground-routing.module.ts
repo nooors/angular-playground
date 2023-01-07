@@ -24,8 +24,8 @@ const routes: Routes = [
       {
         path: "animations",
         loadChildren: () =>
-          import("./pages/check-box/check-box.module").then(
-            (m) => m.CheckBoxModule
+          import("./pages/animations/animations.module").then(
+            (m) => m.AnimationsModule
           ),
       },
       {
