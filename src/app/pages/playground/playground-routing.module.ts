@@ -1,37 +1,44 @@
-import { PlaygroundComponent } from "./playground.component";
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { PlaygroundComponent } from './playground.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: PlaygroundComponent,
     children: [
       {
-        path: "css-binding",
+        path: 'css-binding',
         loadChildren: () =>
-          import("./pages/css-binding/css-binding.module").then(
+          import('./pages/css-binding/css-binding.module').then(
             (m) => m.CssBindingModule
           ),
       },
       {
-        path: "check-box",
+        path: 'check-box',
         loadChildren: () =>
-          import("./pages/check-box/check-box.module").then(
+          import('./pages/check-box/check-box.module').then(
             (m) => m.CheckBoxModule
           ),
       },
       {
-        path: "animations",
+        path: 'animations',
         loadChildren: () =>
-          import("./pages/animations/animations.module").then(
+          import('./pages/animations/animations.module').then(
             (m) => m.AnimationsModule
           ),
       },
       {
-        path: "**",
-        redirectTo: "",
-        pathMatch: "full",
+        path: 'custom-directives',
+        loadChildren: () =>
+          import('./pages/custom-directives/custom-directives.module').then(
+            (m) => m.CustomDirectivesModule
+          ),
+      },
+      {
+        path: '**',
+        redirectTo: '',
+        pathMatch: 'full',
       },
     ],
   },

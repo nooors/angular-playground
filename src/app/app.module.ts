@@ -1,27 +1,26 @@
-import { AppRoutingModule } from "./app-routing.module";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { HeaderModule } from './components/header/header.module';
+import { HeaderComponent } from './components/header/header.component';
 
-import { MatButtonModule } from "@angular/material/button";
-import { MatDividerModule } from "@angular/material/divider";
-import { MatIconModule } from "@angular/material/icon";
-import { MatToolbarModule } from "@angular/material/toolbar";
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppComponent } from "./app.component";
-import { HeaderComponent } from "./components/header/header.component";
-import { ButtonsRowModule } from "./components/buttons-row/buttons-row.module";
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+
+import { AppComponent } from './app.component';
+import { ButtonsRowModule } from './components/buttons-row/buttons-row.module';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HeaderModule,
     ButtonsRowModule,
     MatButtonModule,
     MatDividerModule,
-    MatIconModule,
-    MatToolbarModule,
   ],
 
   providers: [],
