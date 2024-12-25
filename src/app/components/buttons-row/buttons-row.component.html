@@ -1,6 +1,6 @@
 <div *ngIf="buttonNames.length > 0">
   <button
-    mat-button
+    mat-raised-button
     color="accent"
     *ngFor="let buttonName of buttonNames; let i = index; trackBy: trackByIndex"
     (click)="sendTo(buttonName)"
